@@ -1,0 +1,24 @@
+{
+  "name": "backend_nodejs_brasileirao2024",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LimaSilvaLima/nodejshashtag.git"
+  },
+  "keywords": [],
+  "author": "Jose Silva Lima",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/LimaSilvaLima/nodejshashtag/issues"
+  },
+  "homepage": "https://github.com/LimaSilvaLima/nodejshashtag#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
