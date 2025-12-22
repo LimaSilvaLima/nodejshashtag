@@ -1,0 +1,5 @@
+
+npm init -y  /  instalar projeto padrao
+npm instal express  // instalar express
+node ./app.js    //para roda o app com node
+instalar a extensao json.wiewer no navegador
