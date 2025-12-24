@@ -3,3 +3,7 @@ npm init -y  /  instalar projeto padrao
 npm instal express  // instalar express
 node ./app.js    //para roda o app com node
 instalar a extensao json.wiewer no navegador
+node --watch .\app.js      // monitoramento reiniciar servidor automaticament qdo alerado codigo
+npm install joi /// para fazer validaçao
+
+ 
