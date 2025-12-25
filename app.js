@@ -1,5 +1,7 @@
 import tabela2024 from "./tabela.js";
 import express from 'express';
+import {modeloTime, modeloAtualizacaoTime} from './validacao.js';
+
  
 const app = express();
 
@@ -30,6 +32,11 @@ app.put('/:sigla', (req, res) => {
   if (!timeSelecionado) {
     return res.status(404).send('Time não encontrado');
   }
+  const {error} = modeloAtualizacaoTime.validate(req.body).error;
+  if (error) {
+    return res.status(400).send(error.details[0].message);
+  }
+  console.log(resultadoAvaliacao)
   const campos = Object.keys(req.body);
   for (let campo of campos) {
     timeSelecionado[campo] = req.body[campo]; 
@@ -39,6 +46,11 @@ app.put('/:sigla', (req, res) => {
 
 app.post('/', (req, res) => {
   const novoTime = req.body;
+  const {error} = modeloTime.validate(novoTime).error;
+  modeloTime.validate(novoTime);
+  if (error) {
+    return res.status(400).send(error.details[0].message);
+  }
   tabela2024.push(novoTime); 
   res.status(201).send(novoTime);
 });
